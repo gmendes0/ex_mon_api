@@ -31,7 +31,7 @@ defmodule ExMon.Trainer do
     # %{password_hash: password_hash} = Argon2.add_hash password
     # change changeset, password_hash: password_hash
 
-    change changeset, Argon2.add_hash password
+    change(changeset, Argon2.add_hash(password))
   end
 
   defp hash_password(%Ecto.Changeset{} = changeset) do
